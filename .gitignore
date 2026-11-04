@@ -1,0 +1,9 @@
+.DS_Store
+*.preview.tm
+# working material, not part of the public lecture materials
+backup-*/
+phi43_fbsde_course-copy/
+note-polchinski-localisation/
+note_polchinski_uv_stability.*
+html/
+texmacs/
