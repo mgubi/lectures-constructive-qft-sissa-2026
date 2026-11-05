@@ -7,3 +7,4 @@ note-polchinski-localisation/
 note_polchinski_uv_stability.*
 html/
 texmacs/
+*.tm~
