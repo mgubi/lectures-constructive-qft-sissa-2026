@@ -4,28 +4,7 @@
 
 <\body>
   <screens|<\shown>
-    <\with|par-mode|left>
-      <vspace*|0.8cm>
-
-      \;
-
-      <cqft-course-title|A Constructive Introduction to<next-line>Quantum Field Theory>
-
-      <vspace|0.2cm>
-
-      <cqft-lecture-title|Stochastic quantisation and stochastic observables>
-
-      <vspace|0.65cm>
-
-      \;
-
-      <small|Massimiliano Gubinelli \| University of Oxford>
-
-      <small|<with|color|dark grey|SISSA lectures, Lecture<nbsp>3 \V notes:
-      Lecture<nbsp>3, ŸŸ4\U6>>
-
-      \;
-    </with>
+    <cqft-title-slide|Stochastic quantisation and stochastic observables||SISSA lectures, Lecture<nbsp>3 \V notes: Lecture<nbsp>3, ŸŸ4\U6>
   </shown>|<\hidden>
     <mytitle|Where we are>
 
@@ -315,7 +294,7 @@
       c<rsub|k,p>*<space|0.17em>A<rsup|k/2-p>,<space|2em>c<rsub|k,p>=<frac|\<Gamma\>*<around|(|p-<frac|k|2>|)>|<around|(|4*\<pi\>|)><rsup|k/2>*\<Gamma\><around|(|p|)>>.
     </equation*>
 
-    <tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|5|5|1|-1|cell-bborder|1ln>|<table|<row|<cell|<math|<around|(|k,p|)>>>|<cell|slice
+    <data-table|<tformat|<table|<row|<cell|<math|<around|(|k,p|)>>>|<cell|slice
     covariance>|<cell|interpretation>>|<row|<cell|<math|<around|(|1,1|)>>>|<cell|<math|<frac|1|2>*A<rsup|-1/2>>>|<cell|time-zero
     field, <math|<around|(|2*\<omega\>|)><rsup|-1>>>>|<row|<cell|<math|<around|(|2,2|)>>>|<cell|<math|<around|(|4*\<pi\>|)><rsup|-1>*A<rsup|-1>>>|<cell|elliptic
     stochastic quantisation>>|<row|<cell|<math|<around|(|1,1|)>,

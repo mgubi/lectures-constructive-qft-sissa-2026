@@ -4,28 +4,7 @@
 
 <\body>
   <screens|<\hidden>
-    <\with|par-mode|left>
-      <vspace*|0.8cm>
-
-      \;
-
-      <cqft-course-title|A Constructive Introduction to<next-line>Quantum Field Theory>
-
-      <vspace|0.2cm>
-
-      <cqft-lecture-title|Relativistic quantum fields and imaginary time>
-
-      <vspace|0.65cm>
-
-      \;
-
-      <small|Massimiliano Gubinelli \| University of Oxford>
-
-      <small|<with|color|dark grey|SISSA lectures, Lecture<nbsp>1 \V notes:
-      Lecture<nbsp>1, ŸŸ1\U2>>
-
-      \;
-    </with>
+    <cqft-title-slide|Relativistic quantum fields and imaginary time||SISSA lectures, Lecture<nbsp>1 \V notes: Lecture<nbsp>1, ŸŸ1\U2>
   </hidden>|<\hidden>
     <mytitle|What is constructive QFT?>
 
@@ -827,7 +806,7 @@
 
     \;
 
-    <tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|8|8|1|-1|cell-bborder|1ln>|<table|<row|<cell|Quantum
+    <with|font-size|0.85|<data-table|<tformat|<table|<row|<cell|Quantum
     (real time)>|<cell|Euclidean field theory>|<cell|Statistical
     mechanics>>|<row|<cell|Hilbert space positivity,
     <math|H\<geqslant\>0>>|<cell|reflection positivity>|<cell|RP of n.n.
@@ -841,7 +820,7 @@
     correlation length>>|<row|<cell|continuum limit>|<cell|UV cutoff
     <math|\<varepsilon\>\<to\>0>>|<cell|critical point, scaling
     limit>>|<row|<cell|renormalisation>|<cell|counterterms>|<cell|tuning to
-    criticality>>>>>
+    criticality>>>>>>
   </hidden>|<\hidden>
     <mytitle|Continuum limit <math|=> critical point>
 

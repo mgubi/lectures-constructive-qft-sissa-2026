@@ -3,11 +3,8 @@
 <style|<tuple|article|number-long-article|british|cqft-notes|preview-ref>>
 
 <\body>
-  <doc-data|<doc-title|A Constructive Introduction <next-line>to Quantum
-  Field Theory>|<doc-subtitle|Lecture<nbsp>1: Relativistic quantum fields and
-  imaginary time>|<doc-author|<author-data|<author-name|M.
-  Gubinelli>|<author-affiliation|Mathematical Institute, University of
-  Oxford>>>|<doc-date|SISSA, October 2026>>
+  <doc-data|<doc-title|<cqft-course-name>>|<doc-subtitle|Lecture<nbsp>1: Relativistic quantum fields and
+  imaginary time>|<doc-author|<cqft-author-data>>|<doc-date|SISSA, October 2026>>
 
   <abstract-data|<\abstract>
     We recall the Wightman axioms for a relativistic scalar field, explain
@@ -186,7 +183,7 @@
   on a lattice regularisation of the field on a circle, the Feynman\UKac
   formula, the statistical mechanics interpretation and the
   Osterwalder\USchrader axioms. Lecture<nbsp>2
-  (Section<nbsp><hlink|3|cqft_notes_L2.tm#sec:gff> of its notes) studies the
+  (Section<nbsp><hlink|3|cqft_lecture_2.tm#sec:gff> of its notes) studies the
   first example, the Gaussian free field. Section<nbsp><reference|app:plan>
   outlines the plan of the course (six lectures).
 
@@ -496,7 +493,7 @@
     on Friedmann\URobertson\UWalker spacetimes (adiabatic states of finite
     order are, in general, only approximately Hadamard). In the language of
     these lectures, Remark<nbsp><reference|rem:KL>(iii) and its Euclidean
-    version (Remark<nbsp><hlink|3.7|cqft_notes_L2.tm#rem:KL-euclid>) show
+    version (Remark<nbsp><hlink|3.7|cqft_lecture_2.tm#rem:KL-euclid>) show
     that in flat space every theory is at least as singular as the free
     field. The Hadamard condition prescribes exactly the free singularity,
     and the Wick ordering of Lecture<nbsp>2 is the flat-space version of the
@@ -627,16 +624,17 @@
     <\theorem>
       <dueto|Källén\ULehmann<nbsp><cite|Kal52|Leh54>><label|thm:KL> Assume
       (W0)\U(W2). There is a positive Borel measure <math|\<rho\>> on
-      <math|<around|[|0,\<infty\>|)>>, the <em|spectral measure> of the field,
-      such that
-  
+      <math|<around|[|0,\<infty\>|)>>, the <em|spectral measure> of the
+      field, such that
+
       <\equation>
         <label|eq:KL>W<rsub|2>*<around|(|x-y|)>=v<rsup|2>+<big|int><rsub|<around|[|0,\<infty\>|)>>\<rho\><around|(|\<mathd\>M<rsup|2>|)>*<space|0.17em>W<rsub|2><rsup|<around|(|M|)>>*<around|(|x-y|)>
       </equation>
-  
-      in the sense of tempered distributions. The measure <math|\<rho\>> grows
-      at most polynomially and is such that the right-hand side is tempered; in
-      particular <math|\<rho\><around|(|<around|{|0|}>|)>=0> if <math|d=2>.
+
+      in the sense of tempered distributions. The measure <math|\<rho\>>
+      grows at most polynomially and is such that the right-hand side is
+      tempered; in particular <math|\<rho\><around|(|<around|{|0|}>|)>=0> if
+      <math|d=2>.
     </theorem>
   </key-result>
 
@@ -697,7 +695,7 @@
     for any <math|\<rho\>\<neq\>0> when <math|d\<geqslant\>2>. The
     singularity at coincident points of a nontrivial Wightman field is at
     least as strong as that of the free field.
-    Remark<nbsp><hlink|3.7|cqft_notes_L2.tm#rem:KL-euclid> gives a precise
+    Remark<nbsp><hlink|3.7|cqft_lecture_2.tm#rem:KL-euclid> gives a precise
     Euclidean version of this statement.
 
     (iv) <em|Canonical fields and field-strength renormalisation.> If the
@@ -825,7 +823,7 @@
     <item><math|\<varphi\><around|(|x|)><rsup|3>> has no meaning, being the
     cube of a distribution. It must be <em|renormalised>. In <math|d=2> Wick
     ordering <math|:\<varphi\><rsup|3>>: suffices (cf.<nbsp><eqref|eq:logdiv>
-    and Section<nbsp><hlink|3.3|cqft_notes_L2.tm#sec:wick>); in <math|d=3> a
+    and Section<nbsp><hlink|3.3|cqft_lecture_2.tm#sec:wick>); in <math|d=3> a
     further mass counterterm is needed in the equation (and a vacuum-energy
     counterterm in the Hamiltonian); in <math|d=4> the theory is expected to
     be trivial, as is proved for the scaling limits of critical lattice
@@ -1309,7 +1307,7 @@
   connects consecutive rows. The nearest-neighbour structure makes the
   measure reflection positive with respect to <math|\<Theta\>>.>
 
-  <big-table|<with|par-mode|center|font-size|0.84|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|8|8|1|-1|cell-bborder|1ln>|<table|<row|<cell|Quantum
+  <big-table|<with|par-mode|center|<data-table|<tformat|<table|<row|<cell|Quantum
   theory (real time)>|<cell|Euclidean field theory>|<cell|Statistical
   mechanics>>|<row|<cell|positive Hilbert space,
   <math|H\<geqslant\>0>>|<cell|reflection positivity>|<cell|RP of n.n.
@@ -1357,7 +1355,7 @@
     <math|\<varepsilon\>>-dependent couplings, e.g.
     <math|V<rsub|\<varepsilon\>><around|(|a|)>=\<lambda\>*<around|(|a<rsup|4>-6*c<rsub|\<varepsilon\>>*a<rsup|2>|)>>
     (a divergent mass counterterm), i.e. <math|\<lambda\>> times the Wick
-    power <math|:a<rsup|4>>: of Section<nbsp><hlink|3.3|cqft_notes_L2.tm#sec:wick>
+    power <math|:a<rsup|4>>: of Section<nbsp><hlink|3.3|cqft_lecture_2.tm#sec:wick>
     up to a constant. In <math|d=2> this is all that is needed; in <math|d=3>
     more counterterms are required.
   </remark>
@@ -1376,7 +1374,7 @@
   Neither <math|\<cal-D\>*\<varphi\>> nor the action make sense, since
   typical <math|\<varphi\>> are distributions. The Gaussian part, however,
   defines the Gaussian free field <math|\<mu\><rsub|m>> of
-  Section<nbsp><hlink|3|cqft_notes_L2.tm#sec:gff>, and one is led to define
+  Section<nbsp><hlink|3|cqft_lecture_2.tm#sec:gff>, and one is led to define
   <math|\<mu\>\<propto\>\<mathe\><rsup|-<big|int>V<around|(|\<varphi\>|)>>\<mu\><rsub|m>>
   with a renormalised <math|V>, at least in finite volume in <math|d=2>. In
   <math|d=3> this is possible only as the limit of ultraviolet-regularised
@@ -1677,7 +1675,7 @@
   free field; cluster expansions and correlation inequalities appear as
   complementary approaches.
 
-  <big-table|<with|par-mode|center|font-size|0.84|<tabular*|<tformat|<cwith|1|-1|2|2|cell-width|0.3par>|<cwith|1|-1|2|2|cell-hmode|exact>|<cwith|1|-1|2|2|cell-hyphen|t>|<cwith|1|-1|3|3|cell-width|0.55par>|<cwith|1|-1|3|3|cell-hmode|exact>|<cwith|1|-1|3|3|cell-hyphen|t>|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|5|5|1|-1|cell-bborder|1ln>|<table|<row|<cell|>|<cell|Lecture>|<cell|Main
+  <big-table|<with|par-mode|center|<data-table|<tformat|<cwith|1|-1|2|2|cell-width|0.3par>|<cwith|1|-1|2|2|cell-hmode|exact>|<cwith|1|-1|2|2|cell-hyphen|t>|<cwith|1|-1|3|3|cell-width|0.55par>|<cwith|1|-1|3|3|cell-hmode|exact>|<cwith|1|-1|3|3|cell-hyphen|t>|<table|<row|<cell|>|<cell|Lecture>|<cell|Main
   results>>|<row|<cell|1>|<cell|Relativistic quantum fields and imaginary
   time>|<cell|No fields at a point; Källén\ULehmann; Wick rotation;
   Feynman\UKac; OS axioms>>|<row|<cell|2>|<cell|The Gaussian free
@@ -1702,26 +1700,26 @@
   and<nbsp><reference|ex:RP-lattice>. <em|Reading:><nbsp><cite|SW64|BSZ92|GJ87|Sim79>.
 
   <paragraph|Lecture<nbsp>2. The Gaussian free field>
-  Section<nbsp><hlink|3|cqft_notes_L2.tm#sec:gff>: Construction on
+  Section<nbsp><hlink|3|cqft_lecture_2.tm#sec:gff>: Construction on
   <math|\<bbb-T\><rsup|d>> and <math|\<bbb-R\><rsup|d>>; reflection
   positivity and the free Markov field; Euclidean Källén\ULehmann; Wick
   powers; Gaussian integration by parts; DS characterisation. <em|Proofs in
-  class:> Theorem<nbsp><hlink|3.2|cqft_notes_L2.tm#thm:existence>,
-  Proposition<nbsp><hlink|3.4|cqft_notes_L2.tm#prop:RP>,
-  Theorem<nbsp><hlink|3.9|cqft_notes_L2.tm#thm:wick>,
-  Theorem<nbsp><hlink|3.16|cqft_notes_L2.tm#thm:DS-unique>. <em|Exercises:>
-  Exercises<nbsp><hlink|3.3|cqft_notes_L2.tm#ex:regularity>,<nbsp><hlink|3.6|cqft_notes_L2.tm#ex:wickexp>,<nbsp><hlink|3.7|cqft_notes_L2.tm#ex:wick-thm>,<nbsp><hlink|3.8|cqft_notes_L2.tm#ex:DS-finite>
-  and<nbsp><hlink|3.2|cqft_notes_L2.tm#ex:KL-euclid>.
+  class:> Theorem<nbsp><hlink|3.2|cqft_lecture_2.tm#thm:existence>,
+  Proposition<nbsp><hlink|3.4|cqft_lecture_2.tm#prop:RP>,
+  Theorem<nbsp><hlink|3.9|cqft_lecture_2.tm#thm:wick>,
+  Theorem<nbsp><hlink|3.16|cqft_lecture_2.tm#thm:DS-unique>. <em|Exercises:>
+  Exercises<nbsp><hlink|3.3|cqft_lecture_2.tm#ex:regularity>,<nbsp><hlink|3.6|cqft_lecture_2.tm#ex:wickexp>,<nbsp><hlink|3.7|cqft_lecture_2.tm#ex:wick-thm>,<nbsp><hlink|3.8|cqft_lecture_2.tm#ex:DS-finite>
+  and<nbsp><hlink|3.2|cqft_lecture_2.tm#ex:KL-euclid>.
   <em|Reading:><nbsp><cite|She07|Jan97>.
 
   <paragraph|Lecture<nbsp>3. Stochastic quantisation and stochastic
   observables> Separate notes: Parabolic and elliptic stochastic quantisation
   of the GFF; scale decomposition of the GFF and stochastic observables; Wick
   powers as observables in every dimension and the operator product
-  expansion. <em|Proofs in class:> Theorem<nbsp><hlink|4.2|cqft_lecture3.tm#thm:parabolic>,
-  Theorem<nbsp><hlink|4.4|cqft_lecture3.tm#thm:elliptic>. <em|Exercises:>
-  Exercises<nbsp><hlink|4.1|cqft_lecture3.tm#ex:invariance>,<nbsp><hlink|4.4|cqft_lecture3.tm#ex:slices>,<nbsp><hlink|5.1|cqft_lecture3.tm#ex:scale-GFF>,<nbsp><hlink|5.3|cqft_lecture3.tm#ex:brownian-obs>
-  and<nbsp><hlink|6.2|cqft_lecture3.tm#ex:wick-product>.
+  expansion. <em|Proofs in class:> Theorem<nbsp><hlink|4.2|cqft_lecture_3.tm#thm:parabolic>,
+  Theorem<nbsp><hlink|4.4|cqft_lecture_3.tm#thm:elliptic>. <em|Exercises:>
+  Exercises<nbsp><hlink|4.1|cqft_lecture_3.tm#ex:invariance>,<nbsp><hlink|4.4|cqft_lecture_3.tm#ex:slices>,<nbsp><hlink|5.1|cqft_lecture_3.tm#ex:scale-GFF>,<nbsp><hlink|5.3|cqft_lecture_3.tm#ex:brownian-obs>
+  and<nbsp><hlink|6.2|cqft_lecture_3.tm#ex:wick-product>.
   <em|Reading:><nbsp><cite|DPZ14|ADG20|BCG26>.
 
   <paragraph|Lecture<nbsp>4. Forward\Ubackward equations> Separate notes:
@@ -1744,7 +1742,7 @@
 
   <paragraph|Homework and projects> Problem sets can be drawn from the
   exercises at the end of each section. The computer experiments of
-  Section<nbsp><hlink|3|cqft_notes_L2.tm#sec:gff> (lattice GFF, lattice
+  Section<nbsp><hlink|3|cqft_lecture_2.tm#sec:gff> (lattice GFF, lattice
   stochastic quantisation) and the zero-dimensional Polchinski process of
   Lecture<nbsp>4 can be extended to interacting models and are suitable as
   small projects. Possible reading projects: the Griffiths\USimon
@@ -2397,21 +2395,20 @@
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>1\U4.>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Introduction>
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Introduction>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|0.5fn>
+      <no-break><pageref|auto-1><vspace|0.2fn>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Plan
+      <with|par-left|<quote|2tab>|Plan <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|2tab>|Conventions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>>
+      <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Conventions
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Relativistic
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Relativistic
       quantum fields in Minkowski space> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <no-break><pageref|auto-4><vspace|0.2fn>
 
       <with|par-left|<quote|1tab>|1.1<space|2spc>Kinematics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2425,9 +2422,9 @@
       distributions? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|The free field
+      <with|par-left|<quote|2tab>|The free field
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>>
+      <no-break><pageref|auto-9>>
 
       <with|par-left|<quote|1tab>|1.4<space|2spc>The two-point function: the
       Källén\ULehmann representation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2437,21 +2434,21 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Free field on
-      a spatial circle <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>>
-
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Interactions
+      <with|par-left|<quote|2tab>|Free field on a spatial circle
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>>>
+      <no-break><pageref|auto-13>>
+
+      <with|par-left|<quote|2tab>|Interactions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
 
       <with|par-left|<quote|1tab>|Exercises
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>From
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>From
       real to imaginary time> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.5fn>
+      <no-break><pageref|auto-16><vspace|0.2fn>
 
       <with|par-left|<quote|1tab>|2.1<space|2spc>A lattice Hamiltonian on the
       circle <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2473,64 +2470,63 @@
       Osterwalder\USchrader axioms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|The Euclidean
-      strategy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>>
+      <with|par-left|<quote|2tab>|The Euclidean strategy
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>>
 
       <with|par-left|<quote|1tab>|Exercises
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>The
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>The
       course> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28><vspace|0.5fn>
+      <no-break><pageref|auto-28><vspace|0.2fn>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Prerequisites
+      <with|par-left|<quote|2tab>|Prerequisites
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>>
+      <no-break><pageref|auto-29>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Approach
+      <with|par-left|<quote|2tab>|Approach
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>>
+      <no-break><pageref|auto-30>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Lecture
+      <with|par-left|<quote|2tab>|Lecture
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>1.
       Relativistic quantum fields and imaginary time
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>>
+      <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Lecture
+      <with|par-left|<quote|2tab>|Lecture
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>2.
       The Gaussian free field <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>>
+      <no-break><pageref|auto-33>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Lecture
+      <with|par-left|<quote|2tab>|Lecture
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>3.
       Stochastic quantisation and stochastic observables
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>>
+      <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Lecture
+      <with|par-left|<quote|2tab>|Lecture
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>4.
       Forward\Ubackward equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>>
+      <no-break><pageref|auto-35>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Lectures
+      <with|par-left|<quote|2tab>|Lectures
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>5\U6
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>>
+      <no-break><pageref|auto-36>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Homework and
-      projects <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References
-      and further reading> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38><vspace|0.5fn>
-
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Guide
+      <with|par-left|<quote|2tab>|Homework and projects
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>>
+      <no-break><pageref|auto-37>>
+
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References
+      and further reading> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38><vspace|0.2fn>
+
+      <with|par-left|<quote|2tab>|Guide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>>
     </associate>
   </collection>
 </auxiliary>

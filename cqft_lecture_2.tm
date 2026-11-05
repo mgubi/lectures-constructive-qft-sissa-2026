@@ -3,11 +3,8 @@
 <style|<tuple|article|number-long-article|british|cqft-notes|preview-ref>>
 
 <\body>
-  <doc-data|<doc-title|A Constructive Introduction <next-line>to Quantum
-  Field Theory>|<doc-subtitle|Lecture<nbsp>2: The Gaussian free
-  field>|<doc-author|<author-data|<author-name|M.
-  Gubinelli>|<author-affiliation|Mathematical Institute, University of
-  Oxford>>>|<doc-date|SISSA, October 2026>>
+  <doc-data|<doc-title|<cqft-course-name>>|<doc-subtitle|Lecture<nbsp>2: The Gaussian free
+  field>|<doc-author|<cqft-author-data>>|<doc-date|SISSA, October 2026>>
 
   <abstract-data|<\abstract>
     We study the first example of a Euclidean field theory: the Gaussian free
@@ -82,7 +79,7 @@
   distributions satisfying the Osterwalder\USchrader axioms, formally
   <math|\<mu\><around|(|\<mathd\>\<varphi\>|)>\<propto\>exp
   <around|(|-<big|int><around|[|<frac|1|2><around|\||\<nabla\>*\<varphi\>|\|><rsup|2>+<frac|1|2>*m<rsup|2>*\<varphi\><rsup|2>+V<around|(|\<varphi\>|)>|]>|)>*\<cal-D\>*\<varphi\>>
-  (Eq.<nbsp><hlink|(2.13)|cqft_notes_L1.tm#eq:path-integral>). In this
+  (Eq.<nbsp><hlink|(2.13)|cqft_lecture_1.tm#eq:path-integral>). In this
   lecture we treat its Gaussian part rigorously. Conventions are those of
   Lecture<nbsp>1. Sections, equations and exercises keep the numbering of the
   notes, so that Ÿ1\U2 refer to the notes of Lecture<nbsp>1.
@@ -134,7 +131,7 @@
   </definition>
 
   Formally <math|\<mu\><rsub|m><around|(|\<mathd\>\<varphi\>|)>*`*`="*Z<rsup|-1>\<mathe\><rsup|-<frac|1|2>*<around|\<langle\>|\<varphi\>,A*\<varphi\>|\<rangle\>>>\<cal-D\>*\<varphi\>>,
-  the Gaussian part of <hlink|(2.13)|cqft_notes_L1.tm#eq:path-integral>. The
+  the Gaussian part of <hlink|(2.13)|cqft_lecture_1.tm#eq:path-integral>. The
   Green function satisfies (Exercise<nbsp><reference|ex:green>):
   <math|G<rsub|m><around|(|x|)>\<sim\><frac|1|2*\<pi\>>*log
   <frac|1|<around|\||x|\|>>> as <math|x\<to\>0> if <math|d=2>;
@@ -317,17 +314,17 @@
   <math|<around|\<langle\>|\<Theta\>*f,C*f|\<rangle\>>=<around|\<\|\|\>|<around|(|2*\<omega\>|)><rsup|-1/2>*<big|int><rsub|0><rsup|\<infty\>>\<mathe\><rsup|-\<tau\>*\<omega\>>f<around|(|\<tau\>|)>\<mathd\>\<tau\>|\<\|\|\>><rsup|2>\<geqslant\>0>.>
 
   By the OS reconstruction theorem the GFF yields a Wightman theory, the free
-  field of mass <math|m> of Section<nbsp><hlink|1.3|cqft_notes_L1.tm#sec:distrib>.
+  field of mass <math|m> of Section<nbsp><hlink|1.3|cqft_lecture_1.tm#sec:distrib>.
   Concretely, the reconstructed Hilbert space is the Fock space over
   <math|L<rsup|2><around|(|N|)>> with <math|H=\<mathd\>\<Gamma\><around|(|\<omega\>|)>>
   (Nelson's free Markov field<nbsp><cite|Nel73a|Nel73b>). The time-zero
   restriction of the GFF is Gaussian with covariance
   <math|<around|(|2*\<omega\>|)><rsup|-1>>, the ground state measure of the
   free Hamiltonian in the Schrödinger representation
-  (Exercise<nbsp><hlink|4.4|cqft_lecture3.tm#ex:slices> of Lecture<nbsp>3).
+  (Exercise<nbsp><hlink|4.4|cqft_lecture_3.tm#ex:slices> of Lecture<nbsp>3).
   The GFF is also the continuum limit of the lattice model
-  <hlink|(2.12)|cqft_notes_L1.tm#eq:spin-system> with <math|V=0> (for
-  <math|d=2>; in general <math|d> see Exercise<nbsp><hlink|2.3|cqft_notes_L1.tm#ex:lattice-action>
+  <hlink|(2.12)|cqft_lecture_1.tm#eq:spin-system> with <math|V=0> (for
+  <math|d=2>; in general <math|d> see Exercise<nbsp><hlink|2.3|cqft_lecture_1.tm#ex:lattice-action>
   and Exercise<nbsp><reference|ex:lattice-gff>).
 
   <\remark>
@@ -399,7 +396,7 @@
     Schrödinger representation. This is Nelson's reconstruction of quantum
     fields from Euclidean invariant Markov fields<nbsp><cite|Nel73b>, which
     preceded the Osterwalder\USchrader axioms, and it underlies the
-    Feynman\UKac\UNelson formula (Proposition<nbsp><hlink|2.3|cqft_notes_L1.tm#prop:FK>).
+    Feynman\UKac\UNelson formula (Proposition<nbsp><hlink|2.3|cqft_lecture_1.tm#prop:FK>).
 
     (iii) <em|Relevance.> A local perturbation
     <math|\<mathe\><rsup|-<big|int><rsub|\<Lambda\>>V<around|(|\<varphi\>|)>>>
@@ -474,7 +471,7 @@
     the Wick rotation of the free two-point function
     <math|W<rsub|2><rsup|<around|(|M|)>>> is the Green function
     <math|G<rsub|M>> of <math|M<rsup|2>-\<Delta\>>. Rotating
-    <hlink|(1.4)|cqft_notes_L1.tm#eq:KL> term by term, the Schwinger
+    <hlink|(1.4)|cqft_lecture_1.tm#eq:KL> term by term, the Schwinger
     two-point function of any theory satisfying the Wightman (or OS) axioms
     is
 
@@ -514,7 +511,7 @@
     So a gap in the spectral measure of <math|\<varphi\>> is the same as
     exponential decay of <math|S<rsub|2><rsup|T>>; a mass gap of <math|H>
     corresponds to exponential clustering of all truncated correlations
-    (compare Exercise<nbsp><hlink|2.6|cqft_notes_L1.tm#ex:vacuum>).
+    (compare Exercise<nbsp><hlink|2.6|cqft_lecture_1.tm#ex:vacuum>).
 
     (iii) <em|Generalised free fields.> For any positive measure
     <math|\<rho\>> on <math|<around|(|0,\<infty\>|)>> with
@@ -533,7 +530,7 @@
     <math|<around|\||<wide|\<mu\>|^><around|(|f|)>|\|>=\<mathe\><rsup|<frac|1|2>*<around|\<langle\>|g,C*g|\<rangle\>>>>
     with <math|<around|\<langle\>|g,C*g|\<rangle\>>\<sim\>R<rsup|d+2>>.) It
     reconstructs the generalised free field of
-    Exercise<nbsp><hlink|1.6|cqft_notes_L1.tm#ex:gen-free>. Its
+    Exercise<nbsp><hlink|1.6|cqft_lecture_1.tm#ex:gen-free>. Its
     Dyson\USchwinger equation <math|\<bbb-E\>*<around|[|D<rsub|h>*F|]>=\<bbb-E\>*<around|[|F*\<varphi\>*<around|(|C<rsub|\<rho\>><rsup|-1>*h|)>|]>>
     still characterises it: under mild conditions on <math|\<rho\>> (e.g.
     <math|\<rho\>> finite with a mass gap), <math|C<rsub|\<rho\>>> is a
@@ -575,7 +572,7 @@
   </equation*>
 
   with <math|\<varphi\><rsub|m>> the free field
-  <hlink|(1.2)|cqft_notes_L1.tm#eq:free-field> of mass <math|m>. The Wightman
+  <hlink|(1.2)|cqft_lecture_1.tm#eq:free-field> of mass <math|m>. The Wightman
   functions are given by Wick's theorem with
   <math|W<rsub|2>=c<rsub|1><rsup|2>*W<rsub|2><rsup|<around|(|m<rsub|1>|)>>+c<rsub|2><rsup|2>*W<rsub|2><rsup|<around|(|m<rsub|2>|)>>>,
   and all truncated functions of order <math|\<geqslant\>3> vanish.
@@ -587,7 +584,7 @@
   <math|2*m<rsub|1>>. If <math|m<rsub|2>\<gtr\>2*m<rsub|1>>, the second shell
   lies inside the two-particle continuum, but the heavy particle is stable
   because there is no interaction. This is the generalised free field of
-  Exercise<nbsp><hlink|1.6|cqft_notes_L1.tm#ex:gen-free>.
+  Exercise<nbsp><hlink|1.6|cqft_lecture_1.tm#ex:gen-free>.
 
   <em|What is lost.> (1) There is no field equation of second order:
   <math|<around|(|\<Box\>+m<rsub|1><rsup|2>|)>*<around|(|\<Box\>+m<rsub|2><rsup|2>|)>*\<varphi\>=0>,
@@ -596,7 +593,7 @@
   <math|\<pi\>*<around|(|0,\<cdot\>|)>> satisfy
   <math|<around|[|\<varphi\>*<around|(|0,<math-bf|x>|)>,\<pi\>*<around|(|0,<math-bf|y>|)>|]>=\<mathi\><around|(|c<rsub|1><rsup|2>+c<rsub|2><rsup|2>|)>*\<delta\>*<around|(|<math-bf|x>-<math-bf|y>|)>>,
   which is canonical iff <math|c<rsub|1><rsup|2>+c<rsub|2><rsup|2>=1> (the
-  sum rule of Exercise<nbsp><hlink|1.5|cqft_notes_L1.tm#ex:sum-rule>). Even
+  sum rule of Exercise<nbsp><hlink|1.5|cqft_lecture_1.tm#ex:sum-rule>). Even
   when they are canonical, they are not a complete set of Cauchy data:
   <math|\<varphi\>*<around|(|t,\<cdot\>|)>> depends on
   <math|c<rsub|1>*\<varphi\><rsub|m<rsub|1>>*<around|(|0,\<cdot\>|)>> and
@@ -751,17 +748,17 @@
     <\theorem>
       <dueto|Wick powers><label|thm:wick> Let <math|n\<geqslant\>1> with
       <math|n*<around|(|d-2|)>\<less\>d>, i.e. every <math|n> if
-      <math|d\<leqslant\>2>, <math|n\<leqslant\>2> if <math|d=3>, <math|n=1> if
-      <math|d\<geqslant\>4>. Then for every
+      <math|d\<leqslant\>2>, <math|n\<leqslant\>2> if <math|d=3>, <math|n=1>
+      if <math|d\<geqslant\>4>. Then for every
       <math|f\<in\>\<cal-S\><around|(|\<cal-M\>|)>>,
       <math|:\<varphi\><rsup|n>:<around|(|f|)>\<assign\>lim<rsub|\<varepsilon\>\<to\>0>:\<varphi\><rsup|n><rsub|\<varepsilon\>>:<around|(|f|)>>
-      exists in <math|L<rsup|2><around|(|\<mu\><rsub|m>|)>>, is independent of
-      <math|\<eta\>>, and
-  
+      exists in <math|L<rsup|2><around|(|\<mu\><rsub|m>|)>>, is independent
+      of <math|\<eta\>>, and
+
       <\equation>
         <label|eq:wick-cov>\<bbb-E\>*<around*|[|:\<varphi\><rsup|n>:<around|(|f|)>:\<varphi\><rsup|k>:<around|(|g|)>|]>=\<delta\><rsub|n*k>*<space|0.17em>n!<big|iint>f<around|(|x|)>*G*<around|(|x-y|)><rsup|n>*g<around|(|y|)><space|0.17em>\<mathd\>x<space|0.17em>\<mathd\>y.
       </equation>
-  
+
       If instead <math|n*<around|(|d-2|)>\<geqslant\>d> and
       <math|0\<leqslant\>f\<nequiv\>0>, then
       <math|\<bbb-E\><around|[|:\<varphi\><rsub|\<varepsilon\>><rsup|n>:<around|(|f|)><rsup|2>|]>\<to\>\<infty\>>.
@@ -1003,7 +1000,7 @@
 
     which together with <math|S<rsub|0>=1>, <math|S<rsub|1>=0> determines all
     moments (Wick's theorem, Exercise<nbsp><reference|ex:wick-thm>). Compare
-    with <hlink|(1.5)|cqft_notes_L1.tm#eq:KG>: in imaginary time,
+    with <hlink|(1.5)|cqft_lecture_1.tm#eq:KG>: in imaginary time,
     <math|\<Box\>+m<rsup|2>> becomes <math|-\<Delta\>+m<rsup|2>>, and the
     contact terms on the right come from the CCR, i.e. from time ordering.
     (ii) For a formal Gibbs measure <math|\<mu\><rsub|V>\<propto\>\<mathe\><rsup|-<big|int>V<around|(|\<varphi\>|)>>\<mu\><rsub|m>>
@@ -1014,9 +1011,9 @@
     </equation>
 
     the Euclidean counterpart of the nonlinear field equation
-    <hlink|(1.9)|cqft_notes_L1.tm#eq:NLKG> (here
+    <hlink|(1.9)|cqft_lecture_1.tm#eq:NLKG> (here
     <math|V=\<lambda\>*\<varphi\><rsup|4>>, so the <math|\<lambda\>> of
-    <hlink|(1.9)|cqft_notes_L1.tm#eq:NLKG> equals <math|4*\<lambda\>> here).
+    <hlink|(1.9)|cqft_lecture_1.tm#eq:NLKG> equals <math|4*\<lambda\>> here).
     Here <math|V<rprime|'><around|(|\<varphi\>|)>> must be a well-defined
     local operator: for <math|\<Phi\><rsup|4><rsub|2>>,
     <math|V<rprime|'>=4*\<lambda\>:\<varphi\><rsup|3>>:, and the Euclidean
@@ -1087,12 +1084,12 @@
       be a probability measure on <math|\<cal-S\><rprime|'><around|(|\<cal-M\>|)>>
       such that <math|\<varphi\><around|(|f|)>\<in\>L<rsup|1><around|(|\<nu\>|)>>
       for all <math|f\<in\>\<cal-S\><around|(|\<cal-M\>|)>> and
-  
+
       <\equation>
         <label|eq:DS-nu>\<bbb-E\><rsub|\<nu\>>*<around|[|D<rsub|h>*F|]>=\<bbb-E\><rsub|\<nu\>>*<around|[|F*<space|0.17em>\<varphi\>*<around|(|A*h|)>|]>*<space|2em><text|for
         all >F\<in\>\<cal-F\>*C<rsup|\<infty\>><rsub|b>,h\<in\>\<cal-S\><around|(|\<cal-M\>|)>.
       </equation>
-  
+
       Then <math|\<nu\>=\<mu\><rsub|m>>.
     </theorem>
   </key-result>
@@ -1180,7 +1177,7 @@
     </equation*>
 
     and derive<nbsp><eqref|eq:KL-euclid> from
-    <hlink|(1.4)|cqft_notes_L1.tm#eq:KL>. (b) Show that
+    <hlink|(1.4)|cqft_lecture_1.tm#eq:KL>. (b) Show that
     <math|G<rsub|M><around|(|x|)>> is decreasing in <math|M> and, for
     <math|d\<geqslant\>2>, that <math|G<rsub|M><around|(|x|)>/G<rsub|m><around|(|x|)>\<to\>1>
     as <math|x\<to\>0>. Prove the lower bound in
@@ -1310,8 +1307,8 @@
     via <math|\<varphi\><around|(|f|)>=\<varepsilon\><rsup|d>*<big|sum><rsub|u>\<varphi\><rsub|u>*f<around|(|u|)>>.
     Show that <math|\<mu\><rsub|\<varepsilon\>>\<to\>\<mu\><rsub|m>> weakly.
     Relate <math|\<mu\><rsub|\<varepsilon\>>> to
-    <hlink|(2.12)|cqft_notes_L1.tm#eq:spin-system> with <math|V=0> (for
-    <math|d=2>; in general <math|d> see Exercise<nbsp><hlink|2.3|cqft_notes_L1.tm#ex:lattice-action>).
+    <hlink|(2.12)|cqft_lecture_1.tm#eq:spin-system> with <math|V=0> (for
+    <math|d=2>; in general <math|d> see Exercise<nbsp><hlink|2.3|cqft_lecture_1.tm#ex:lattice-action>).
   </exercise>
 
   <\exercise>
@@ -1321,7 +1318,7 @@
     with mass <math|m/N> in lattice units) by FFT, for <math|N=64,256,1024>,
     and check that the empirical variance of <math|\<varphi\><rsub|u>> grows
     like <math|<frac|1|2*\<pi\>>*log N>. (b) Implement an explicit Euler
-    scheme for the lattice version of <hlink|(4.1)|cqft_lecture3.tm#eq:SQE>
+    scheme for the lattice version of <hlink|(4.1)|cqft_lecture_3.tm#eq:SQE>
     in Lecture<nbsp>3 with <math|V=0> (mind the stability constraint
     <math|\<Delta\>*t\<lesssim\>\<varepsilon\><rsup|2>>), and check that the
     variance of the <math|k>-th Fourier mode relaxes to
@@ -1672,12 +1669,7 @@
     <associate|auto-13|<tuple|3.5|12>>
     <associate|auto-14|<tuple|3.12|13>>
     <associate|auto-15|<tuple|1|13>>
-    <associate|auto-16|<tuple|3.6|14>>
-    <associate|auto-17|<tuple|3.7|15>>
-    <associate|auto-18|<tuple|3.7|15>>
-    <associate|auto-19|<tuple|3.16|17>>
     <associate|auto-2|<tuple|3|2>>
-    <associate|auto-20|<tuple|1|17>>
     <associate|auto-3|<tuple|3.1|2>>
     <associate|auto-4|<tuple|3.1|2>>
     <associate|auto-5|<tuple|3.2|3>>
@@ -1749,20 +1741,15 @@
     <associate|bib-Wil69|<tuple|Wil69|16>>
     <associate|bib-Zim73|<tuple|Zim73|16>>
     <associate|def:gff|<tuple|3.1|2>>
-    <associate|eq:4pi|<tuple|3.18|15>>
     <associate|eq:DS|<tuple|3.10|10>>
     <associate|eq:DS-V|<tuple|3.12|11>>
     <associate|eq:DS-hierarchy|<tuple|3.11|10>>
     <associate|eq:DS-nu|<tuple|3.13|11>>
-    <associate|eq:ESQ|<tuple|3.17|14>>
     <associate|eq:KL-euclid|<tuple|3.5|5>>
     <associate|eq:RP|<tuple|3.4|3>>
-    <associate|eq:SQE|<tuple|3.14|12>>
-    <associate|eq:generator|<tuple|3.15|12>>
     <associate|eq:gff-cov|<tuple|3.2|2>>
     <associate|eq:hermite|<tuple|3.6|8>>
     <associate|eq:series|<tuple|3.3|3>>
-    <associate|eq:stat-sol|<tuple|3.16|13>>
     <associate|eq:wick-cov|<tuple|3.8|8>>
     <associate|ex:DS-finite|<tuple|3.8|13>>
     <associate|ex:KL-euclid|<tuple|3.2|12>>
@@ -1770,19 +1757,15 @@
     <associate|ex:lattice-gff|<tuple|3.10|13>>
     <associate|ex:massless|<tuple|3.9|13>>
     <associate|ex:regularity|<tuple|3.3|12>>
-    <associate|ex:slices|<tuple|3.13|16>>
     <associate|ex:two-masses|<tuple|3.12|13>>
-    <associate|ex:weak|<tuple|3.12|16>>
     <associate|ex:wick-thm|<tuple|3.7|13>>
     <associate|ex:wickexp|<tuple|3.6|13>>
     <associate|fig:RP|<tuple|3.2|4>>
     <associate|fig:gff|<tuple|3.1|2>>
-    <associate|fig:she|<tuple|3.3|14>>
     <associate|lem:gibp|<tuple|3.13|10>>
     <associate|lem:hermite|<tuple|3.8|8>>
     <associate|prop:DS|<tuple|3.14|10>>
     <associate|prop:RP|<tuple|3.4|3>>
-    <associate|prop:inf-inv|<tuple|3.18|13>>
     <associate|prop:no-wick|<tuple|3.11|9>>
     <associate|rem:DS|<tuple|3.15|10>>
     <associate|rem:KL-euclid|<tuple|3.7|5>>
@@ -1792,9 +1775,7 @@
     <associate|sec:gff|<tuple|3|2>>
     <associate|sec:wick|<tuple|3.3|8>>
     <associate|thm:DS-unique|<tuple|3.16|11>>
-    <associate|thm:elliptic|<tuple|3.21|14>>
     <associate|thm:existence|<tuple|3.2|3>>
-    <associate|thm:parabolic|<tuple|3.19|13>>
     <associate|thm:wick|<tuple|3.9|8>>
   </collection>
 </references>
@@ -2055,13 +2036,13 @@
       through the time-zero plane: <with|mode|<quote|math>|<around|\<langle\>|\<Theta\>*f,C*f|\<rangle\>>=<around|\<\|\|\>|<around|(|2*\<omega\>|)><rsup|-1/2>*<big|int><rsub|0><rsup|\<infty\>>\<mathe\><rsup|-\<tau\>*\<omega\>>f<around|(|\<tau\>|)>\<mathd\>\<tau\>|\<\|\|\>><rsup|2>\<geqslant\>0>.>|<pageref|auto-6>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Introduction>
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Introduction>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|0.5fn>
+      <no-break><pageref|auto-1><vspace|0.2fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>The
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>The
       Gaussian free field> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      <no-break><pageref|auto-2><vspace|0.2fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Definition and construction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2071,22 +2052,21 @@
       the free field <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Example: two
-      masses <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>>
+      <with|par-left|<quote|2tab>|Example: two masses
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Physical
-      meaning of the nonlocal theory <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>>
+      <with|par-left|<quote|2tab>|Physical meaning of the nonlocal theory
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Local operators: Wick
       products <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Beyond
-      <with|mode|<quote|math>|L<rsup|2>>: no random distribution
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>>
+      <with|par-left|<quote|2tab>|Beyond <with|mode|<quote|math>|L<rsup|2>>:
+      no random distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
 
       <with|par-left|<quote|1tab>|3.4<space|2spc>Gaussian integration by
       parts and the Dyson\USchwinger equation
@@ -2101,13 +2081,12 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References
+      <vspace*|0.6fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References
       and further reading> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14><vspace|0.5fn>
+      <no-break><pageref|auto-14><vspace|0.2fn>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Guide
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>>
+      <with|par-left|<quote|2tab>|Guide <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
     </associate>
   </collection>
 </auxiliary>

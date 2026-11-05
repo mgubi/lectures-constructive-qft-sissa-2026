@@ -14,12 +14,12 @@ obtained with the use of AI.
 
 | Lecture | Notes | Slides |
 |---|---|---|
-| 1. Relativistic quantum fields and imaginary time | `cqft_notes_L1` | `cqft_slides_L1` |
-| 2. The Gaussian free field | `cqft_notes_L2` | `cqft_slides_L2` |
-| 3. Stochastic quantisation and stochastic observables | `cqft_lecture3` | `cqft_slides_L3` |
-| 4. Forward–backward equations | `cqft_lecture4` | `cqft_slides_L4` |
-| 5. Φ⁴₃ on the torus I: the FBSDE in force coordinates | `cqft_lecture5` | `cqft_slides_L5` |
-| 6. Φ⁴₃ on the torus II: a priori estimates and the limit | `cqft_lecture6` | `cqft_slides_L6` |
+| 1. Relativistic quantum fields and imaginary time | `cqft_lecture_1` | `cqft_slides_1` |
+| 2. The Gaussian free field | `cqft_lecture_2` | `cqft_slides_2` |
+| 3. Stochastic quantisation and stochastic observables | `cqft_lecture_3` | `cqft_slides_3` |
+| 4. Forward–backward equations | `cqft_lecture_4` | `cqft_slides_4` |
+| 5. Φ⁴₃ on the torus I: the FBSDE in force coordinates | `cqft_lecture_5` | `cqft_slides_5` |
+| 6. Φ⁴₃ on the torus II: a priori estimates and the limit | `cqft_lecture_6` | `cqft_slides_6` |
 | Supplement to Lectures 5–6 | `cqft_supplement` | |
 
 Sources are [GNU TeXmacs](https://www.texmacs.org) documents (`.tm`) using

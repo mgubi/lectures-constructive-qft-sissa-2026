@@ -4,28 +4,7 @@
 
 <\body>
   <screens|<\shown>
-    <\with|par-mode|left>
-      <vspace*|0.8cm>
-
-      \;
-
-      <cqft-course-title|A Constructive Introduction to<next-line>Quantum Field Theory>
-
-      <vspace|0.2cm>
-
-      <cqft-lecture-title|The Gaussian free field>
-
-      <vspace|0.65cm>
-
-      \;
-
-      <small|Massimiliano Gubinelli \| University of Oxford>
-
-      <small|<with|color|dark grey|SISSA lectures, Lecture<nbsp>2 \V notes:
-      Lecture<nbsp>2, Ÿ3>>
-
-      \;
-    </with>
+    <cqft-title-slide|The Gaussian free field||SISSA lectures, Lecture<nbsp>2 \V notes: Lecture<nbsp>2, Ÿ3>
   </shown>|<\hidden>
     <mytitle|Where we are>
 
@@ -184,7 +163,7 @@
 
     <with|font-series|bold|Regularity> (sharp, Exercise<nbsp>3.3):
 
-    <tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|2|2|1|-1|cell-bborder|1ln>|<table|<row|<cell|<math|d=1>>|<cell|<math|d=2>>|<cell|<math|d=3>>>|<row|<cell|stationary
+    <data-table|<tformat|<table|<row|<cell|<math|d=1>>|<cell|<math|d=2>>|<cell|<math|d=3>>>|<row|<cell|stationary
     OU process>|<cell|<math|H<rsup|-\<kappa\>>>,
     <math|\<forall\>\<kappa\>\<gtr\>0>; not a
     function>|<cell|<math|H<rsup|-1/2-\<kappa\>>>>>>>>

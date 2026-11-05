@@ -4,28 +4,7 @@
 
 <\body>
   <screens|<\shown>
-    <\with|par-mode|left>
-      <vspace*|0.8cm>
-
-      <cqft-course-title|A Constructive Introduction to<next-line>Quantum Field Theory>
-
-      <vspace|0.2cm>
-
-      <cqft-lecture-title|Forward\Ubackward equations>
-
-      <vspace|0.65cm>
-
-      \;
-
-      <small|Massimiliano Gubinelli \| University of Oxford>
-
-      <small|Joint work with Sarah-Jean Meyer, with the use of AI>
-
-      <small|<with|color|dark grey|SISSA lectures, Lecture<nbsp>4 \V notes:
-      Lecture<nbsp>4, ŸŸ7\U9, Appendices A\UB>>
-
-      \;
-    </with>
+    <cqft-title-slide|Forward\Ubackward equations|Joint work with Sarah-Jean Meyer, with the use of AI|SISSA lectures, Lecture<nbsp>4 \V notes: Lecture<nbsp>4, ŸŸ7\U9, Appendices A\UB>
   </shown>|<\hidden>
     <mytitle|Where we are>
 
@@ -760,7 +739,7 @@
     \;
 
     <\padded-center>
-      <with|font-size|0.8|<wide-tabular|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|-1|2|4|cell-hyphen|t>|<cwith|1|-1|1|1|cell-width|0.2par>|<cwith|1|-1|1|1|cell-hmode|exact>|<cwith|1|-1|2|4|cell-width|0.26par>|<cwith|1|-1|2|4|cell-hmode|exact>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|8|8|1|-1|cell-bborder|1ln>|<table|<row|<\cell>
+      <with|font-size|0.8|<wide-data-table|<tformat|<cwith|1|-1|1|-1|cell-tsep|0.1fn>|<cwith|1|-1|1|-1|cell-bsep|0.1fn>|<cwith|1|-1|2|4|cell-hyphen|t>|<cwith|1|-1|1|1|cell-width|0.2par>|<cwith|1|-1|1|1|cell-hmode|exact>|<cwith|1|-1|2|4|cell-width|0.26par>|<cwith|1|-1|2|4|cell-hmode|exact>|<table|<row|<\cell>
         \;
       </cell>|<\cell>
         <strong|Renormalisation>
@@ -1410,7 +1389,7 @@
 
     \;
 
-    <center|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|6|6|1|-1|cell-bborder|1ln>|<table|<row|<cell|Wetterich>|<cell|FBSDE>>|<row|<cell|field
+    <center|<data-table|<tformat|<table|<row|<cell|Wetterich>|<cell|FBSDE>>|<row|<cell|field
     argument <math|\<psi\>>>|<cell|forecast
     <math|\<psi\><rsub|t>=\<bbb-E\><rsub|t><around|[|\<Phi\><rsub|T>|]>>>>|<row|<cell|<math|\<mathD\>\<Gamma\><rsub|t><around|(|\<psi\><rsub|t>|)>>>|<cell|minus
     the costate, <math|\<bbb-E\><rsub|t>*<around|[|\<mathD\>V<rsub|T><around|(|\<Phi\><rsub|T>|)>|]>>>>|<row|<cell|propagator
@@ -2226,7 +2205,7 @@
 
     <\with|font-size|0.9>
       <\padded-center>
-        <with|font-size|0.9|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|5|5|1|-1|cell-bborder|1ln>|<table|<row|<cell|this
+        <with|font-size|0.9|<data-table|<tformat|<table|<row|<cell|this
         lecture>|<cell|Bauerschmidt\UBodineau>|<cell|localisation>>|<row|<cell|<math|\<nu\><rsub|t>>>|<cell|renormalised
         measure>|<cell|law of the tilt>>|<row|<cell|<math|\<mu\><rsub|t><rsup|\<phi\>>>>|<cell|fluctuation
         measure>|<cell|tilted measure>>|<row|<cell|<math|G<rsub|t>>>|<cell|Polchinski

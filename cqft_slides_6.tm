@@ -4,31 +4,45 @@
 
 <\body>
   <screens|<\hidden>
-    <\with|par-mode|left>
-      <vspace*|0.8cm>
+    <cqft-title-slide|<math|\<Phi\><rsup|4><rsub|3>> on the torus II: a priori estimates and the limit|Joint work with Sarah-Jean Meyer, with the use of AI|SISSA lectures, Lecture<nbsp>6 (provisional) \V notes: Lecture<nbsp>6, ŸŸ13\U18>
+  </hidden>|<\hidden>
+    <mytitle|Notation from Lecture<nbsp>5>
 
-      \;
+    <\with|font-size|0.9>
+      <\itemize>
+        <item><strong|Lattice>: <math|\<Lambda\><rsub|N>=<around|(|N<rsup|-1>*\<bbb-Z\>/\<bbb-Z\>|)><rsup|3>>,
+        <math|<big|int>f=N<rsup|-3>*<big|sum><rsub|x>f<around|(|x|)>>,
+        <math|<around|\<\|\|\>|\<cdot\>|\<\|\|\>><rsub|p>> the
+        <math|L<rsup|p>> norms, <math|\<Delta\>=\<Delta\><rsub|N>>.
 
-      <cqft-course-title|A Constructive Introduction to<next-line>Quantum
-      Field Theory>
+        <item><strong|Free operators>: resolution
+        <math|q\<in\><around|[|q<rsub|0>,\<infty\>|)>>,
+        <math|K<rsub|q>=q-\<Delta\>> (precision),
+        <math|C<rsub|q>=K<rsub|q><rsup|-1>> (unresolved covariance),
+        <math|<around|\<\|\|\>|C<rsub|q>|\<\|\|\>><rsub|p\<to\>p>=q<rsup|-1>>;
+        <math|C=C<rsub|q<rsub|0>>> the Gaussian reference,
+        <math|K<rsub|q<rsub|0>>=q<rsub|0>-\<Delta\>> the free field
+        operator, <math|q<rsub|0>\<gtr\>0> the reference mass.
 
-      <vspace|0.2cm>
+        <item><strong|Couplings>: <math|\<gamma\>=3*\<lambda\>>,
+        <math|g<rsub|q>=\<gamma\>*q<rsup|-1/2>>,
+        <math|r<rsub|q>=<around|(|q/\<gamma\>|)><rsup|1/2>> (cube
+        <math|\<asymp\>K<rsub|q>>), auxiliary scale
+        <math|q<rsub|\<ast\>>>.
 
-      <cqft-lecture-title|<math|\<Phi\><rsup|4><rsub|3>> on the torus II: a
-      priori estimates and the limit>
+        <item><strong|Processes>: Polchinski process <math|\<Phi\><rsub|q>>
+        (<math|\<Phi\><rsub|q<rsub|0>>=0>), innovation <math|W>, bridge
+        noise <math|B>, forecast <math|\<psi\><rsub|q>=\<bbb-E\><rsub|q>\<Phi\><rsub|\<infty\>>>,
+        <math|<math-up|Cov><rsub|q>> its conditional covariance.
 
-      <vspace|0.65cm>
-
-      \;
-
-      <small|Massimiliano Gubinelli \| University of Oxford>
-
-      <small|Joint work with Sarah-Jean Meyer, with the use of AI>
-
-      <small|<with|color|dark grey|SISSA lectures, Lecture<nbsp>6
-      (provisional) \V notes: Lecture<nbsp>6, ŸŸ13\U18>>
-
-      \;
+        <item><strong|Forces>: exact <math|\<cal-F\><rsub|q>>
+        (<math|K<rsub|q>\<Phi\><rsub|q>=K<rsub|q>\<psi\><rsub|q>+\<cal-F\><rsub|q><around|(|\<psi\><rsub|q>|)>>),
+        explicit <math|<wide|\<cal-F\>|\<bar\>><rsub|q><around|(|y|)>=<frac|\<gamma\>|3>*y<rsup|3>+M<rsub|q>*y+<wide|\<ell\>|~><rsub|q><around|(|y|)>>;
+        response <math|H<rsub|q>=<around|(|K<rsub|q>+D<wide|\<cal-F\>|\<bar\>><rsub|q>|)><rsup|-1>>,
+        defect drift <math|b<rsub|q>>,
+        <math|\<Xi\><rsub|q>=<math-up|Cov><rsub|q>-H<rsub|q><around|(|Y<rsub|q>|)>>,
+        coordinate correction <math|\<varrho\><rsub|q>>.
+      </itemize>
     </with>
   </hidden>|<\shown>
     <mytitle|Where we are>
@@ -164,11 +178,7 @@
   </hidden>|<\hidden>
     <mytitle|Thresholds and energies>
 
-    \;
-
-    <\equation*>
-      w<rsub|q>=<math-up|sgn><around|(|V<rsub|q>|)>*<around*|(|<around|\||V<rsub|q>|\|>-<tfrac|3|4>r<rsub|q>|)><rsub|+>,<space|2em>t<rsub|q>=Y<rsub|q>*<with|math-font|Bbb|1><rsub|<around|\||Y<rsub|q>|\|>\<gtr\>r<rsub|q>>,<space|2em>\<xi\><rsub|q>=\<zeta\><rsub|q>*<with|math-font|Bbb|1><rsub|<around|\||\<zeta\><rsub|q>|\|>\<gtr\>r<rsub|q>/32>.
-    </equation*>
+    Thresholds: <math|w<rsub|q>=<math-up|sgn><around|(|V<rsub|q>|)>*<around*|(|<around|\||V<rsub|q>|\|>-<tfrac|3|4>r<rsub|q>|)><rsub|+>,<space|2em>t<rsub|q>=Y<rsub|q>*<with|math-font|Bbb|1><rsub|<around|\||Y<rsub|q>|\|>\<gtr\>r<rsub|q>>,<space|2em>\<xi\><rsub|q>=\<zeta\><rsub|q>*<with|math-font|Bbb|1><rsub|<around|\||\<zeta\><rsub|q>|\|>\<gtr\>r<rsub|q>/32>>.
 
     <\equation*>
       <\aligned>
@@ -179,15 +189,13 @@
       </aligned>
     </equation*>
 
-    <tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|4|4|1|-1|cell-bborder|1ln>|<table|<row|<cell|quantity>|<cell|weight>|<cell|reason>>|<row|<cell|<math|<around|\<\|\|\>|Z<rsub|q>|\<\|\|\>><rsup|2>>>|<cell|<math|q<rsup|1/2>>>|<cell|forcing:
+    <data-table|<tformat|<table|<row|<cell|quantity>|<cell|weight>|<cell|reason>>|<row|<cell|<math|<around|\<\|\|\>|Z<rsub|q>|\<\|\|\>><rsup|2>>>|<cell|<math|q<rsup|1/2>>>|<cell|forcing:
     <math|q<rsup|-3/2>\<cdot\>\<gamma\><rsup|-1>*q<rsup|2><around|\<\|\|\>|Z|\<\|\|\>><rsub|2><rsup|2>>>>|<row|<cell|<math|\<gamma\><around|\<\|\|\>|t<rsub|q>|\<\|\|\>><rsub|6><rsup|6>>>|<cell|<math|q<rsup|-3/2>>>|<cell|<math|q<rsup|7/2><around|\<\|\|\>|b<rsup|<math-up|l>>|\<\|\|\>><rsup|2>\<leqslant\>C*\<gamma\><rsup|3>\<cdot\>\<gamma\>*q<rsup|-3/2><around|\<\|\|\>|t|\<\|\|\>><rsub|6><rsup|6>>>>|<row|<cell|<math|<around|\<\|\|\>|b<rsup|<math-up|l>><rsub|q>|\<\|\|\>><rsup|2>>>|<cell|<math|q<rsup|7/2>>>|<cell|propagator
     <math|s/q>, <math|<big|int><rsub|q><rsup|\<infty\>>s<rsup|-3/2>=2*q<rsup|-1/2>>>>>>>
 
-    Only <strong|thresholded> sixth powers: unthresholded,
-    <math|\<bbb-E\><around|\<\|\|\>|\<zeta\><rsub|q>|\<\|\|\>><rsub|6><rsup|6>>
-    can be of order <math|q<rsup|3/2>> (free case), so
-    <math|<big|int>\<gamma\>*q<rsup|-3/2>*\<bbb-E\><around|\<\|\|\>|\<zeta\><rsub|q>|\<\|\|\>><rsub|6><rsup|6>>
-    can reach <math|\<gamma\>*N<rsup|2>>, not uniform in <math|N>.
+    Only <strong|thresholded> sixth powers:
+    <math|\<bbb-E\><around|\<\|\|\>|\<zeta\><rsub|q>|\<\|\|\>><rsub|6><rsup|6>\<sim\>q<rsup|3/2>>
+    would give <math|G<rsub|T>\<sim\>\<gamma\>*N<rsup|2>>.
   </hidden>|<\hidden>
     <vspace*|2.5cm>
 
@@ -1168,7 +1176,7 @@
     <math|\<Phi\><rsup|4><rsub|3>> through the FBSDE in forecast coordinates
     (L5\U6).
 
-    <tabular*|<tformat|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|6|6|1|-1|cell-bborder|1ln>|<table|<row|<cell|Lecture
+    <data-table|<tformat|<table|<row|<cell|Lecture
     4 (formal)>|<cell|Lectures 5\U6>|<cell|in the limit>>|<row|<cell|forecast
     <math|\<psi\><rsub|t>=\<bbb-E\><rsub|t>*\<Phi\><rsub|T>>>|<cell|<math|\<psi\>=Y+Z>>|<cell|closed
     martingale>>|<row|<cell|response <math|H<rsub|t>=<math-up|Cov><rsub|t>>>|<cell|<math|<math-up|Cov>=H<around|(|Y|)>+\<Xi\>>>|<cell|conditional
