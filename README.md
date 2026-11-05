@@ -1,13 +1,13 @@
 # A constructive introduction to quantum field theory
 
 Lecture notes and slides for the course given by Massimiliano Gubinelli
-(University of Oxford) at SISSA, Trieste, 20 October–6 November 2026, as
+(University of Oxford) at SISSA, Trieste, 20 October–9 November 2026, as
 part of the Probability and Stochastic Analysis Trimester Programme.
 
 Course page, with HTML versions of all materials:
 <https://mgubi.github.io/docs/teaching/lectures-constructive-qft-sissa-2026.html>
 
-The results presented in Lectures 4–6 are joint work with Sarah-Jean Meyer,
+The results presented in Lectures 4–7 are joint work with Sarah-Jean Meyer,
 obtained with the use of AI.
 
 ## Contents
@@ -18,14 +18,15 @@ obtained with the use of AI.
 | 2. The Gaussian free field | `cqft_lecture_2` | `cqft_slides_2` |
 | 3. Stochastic quantisation and stochastic observables | `cqft_lecture_3` | `cqft_slides_3` |
 | 4. Forward–backward equations | `cqft_lecture_4` | `cqft_slides_4` |
-| 5. Φ⁴₃ on the torus I: the FBSDE in force coordinates | `cqft_lecture_5` | `cqft_slides_5` |
-| 6. Φ⁴₃ on the torus II: a priori estimates and the limit | `cqft_lecture_6` | `cqft_slides_6` |
-| Supplement to Lectures 5–6 | `cqft_supplement` | |
+| 5. Observables and field equations | `cqft_lecture_5` | `cqft_slides_5` |
+| 6. Φ⁴₃ on the torus I: the FBSDE in force coordinates | `cqft_lecture_6` | `cqft_slides_6` |
+| 7. Φ⁴₃ on the torus II: a priori estimates and the limit | `cqft_lecture_7` | `cqft_slides_7` |
+| Supplement to Lectures 6–7 | `cqft_supplement` | |
 
 Sources are [GNU TeXmacs](https://www.texmacs.org) documents (`.tm`) using
 the style packages `cqft-notes.ts` and `cqft-slides.ts`; the PDFs of the
 slides (`*-print.pdf`) have one page per slide. `figures/make_figures.py`
-regenerates the figures.
+regenerates the figures; `figures/bridge_noise.py`, `figures/one_site_force.py` and `figures/onesite_filter.py` generate the TikZ sources of the figures that use them.
 
 ## Acknowledgements
 

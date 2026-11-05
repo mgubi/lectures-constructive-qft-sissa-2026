@@ -346,47 +346,57 @@ def fig_fbsde_flow():
         c = phi.var()
         phi, c = phi / np.sqrt(c), 1.0  # display units
         fields.append(phi)
-        forces.append(-4 * lam * (phi**3 - 3 * c * phi))  # -4 lam H_3(X_t; c_t)
-    fig = plt.figure(figsize=(6.6, 3.55))
+        forces.append(-lam / 3 * (phi**3 - 3 * c * phi))  # -(lam/3) H_3(X_t; c_t)
+    fig = plt.figure(figsize=(6.6, 4.25))
     fig.patch.set_facecolor("white")
-    W, H, x0, gap, yF, yB = 0.15, 0.27, 0.03, 0.08, 0.50, 0.12
+    W, H, x0, gap, yF, yB = 0.15, 0.225, 0.03, 0.08, 0.43, 0.10
     for i, (phi, f) in enumerate(zip(fields, forces)):
         x = x0 + i * (W + gap)
+        lab = labels[i].strip("$")
         ax = fig.add_axes([x, yF, W, H])
         ax.imshow(phi, cmap=CM_FIELD, vmin=-3, vmax=3, interpolation="bilinear")
         _frame(ax, SNAVY)
-        ax.set_title(r"$\Phi_{%s}$" % labels[i].strip("$"), fontsize=10, color=SNAVY, pad=3)
+        ax.set_title(r"$\Phi_{%s}$" % lab, fontsize=10, color=SNAVY, pad=3)
         ax = fig.add_axes([x, yB, W, H])
         v = np.quantile(np.abs(f), 0.97)
         ax.imshow(f, cmap=CM_FORCE, vmin=-v, vmax=v, interpolation="bilinear")
         _frame(ax, GOLD, 1.4 if i == 3 else 0.8)
-        ax.set_xlabel(r"$F_{%s}$" % labels[i].strip("$"), fontsize=10, color=GOLD, labelpad=3)
+        ax.set_xlabel(r"$F_{%s}$" % lab, fontsize=10, color=GOLD, labelpad=3)
+        # vertical link: the field at resolution t gives the force at t
+        xc = x + W / 2
+        fig.add_artist(FancyArrowPatch((xc, yF - 0.012), (xc, yB + H + 0.012),
+                       transform=fig.transFigure, arrowstyle="-|>", mutation_scale=9,
+                       color=GOLD, lw=1.0))
+        fig.text(xc + 0.012, (yF + yB + H) / 2, r"$-DV_{%s}$" % lab, color=GOLD,
+                 fontsize=8.5, ha="left", va="center")
         if i < 3:
             xm = x + W + gap / 2
-            fig.text(xm, yF + H / 2 + 0.035, "+", ha="center", va="center",
+            fig.text(xm, yF + H / 2 + 0.03, "+", ha="center", va="center",
                      fontsize=14, color=TEAL)
-            fig.text(xm, yF + H / 2 - 0.035, r"$\dot Q^{1/2}\mathrm{d}W$", ha="center",
+            fig.text(xm, yF + H / 2 - 0.03, r"$\dot Q^{1/2}\mathrm{d}W$", ha="center",
                      va="center", fontsize=7.5, color=TEAL)
             fig.add_artist(FancyArrowPatch((x + W + gap - 0.008, yB + H / 2),
                            (x + W + 0.008, yB + H / 2), transform=fig.transFigure,
                            arrowstyle="-|>", mutation_scale=9, color=GOLD, lw=1.0))
-    # vertical link: terminal field -> terminal force
     xT = x0 + 3 * (W + gap) + W
-    fig.add_artist(FancyArrowPatch((xT + 0.015, yF + H / 2), (xT + 0.015, yB + H / 2),
-                   transform=fig.transFigure, connectionstyle="arc3,rad=-0.5",
-                   arrowstyle="-|>", mutation_scale=9, color=GOLD, lw=1.0))
-    fig.text(xT + 0.065, (yF + yB + H) / 2, r"$-DV_T$", color=GOLD, fontsize=9,
-             ha="left", va="center")
-    # big arrows
-    fig.add_artist(FancyArrowPatch((x0, 0.90), (xT, 0.90), transform=fig.transFigure,
-                   arrowstyle="-|>", mutation_scale=14, color=SNAVY, lw=2.0))
-    fig.text((x0 + xT) / 2, 0.955,
+    # forward and reversed dynamics of the field
+    fig.text((x0 + xT) / 2, 0.915,
              r"forward: $\mathrm{d}\Phi_t=\dot Q_tF_t\,\mathrm{d}t+\dot Q_t^{1/2}\mathrm{d}W_t$"
-             "  (finer modes are revealed)", ha="center", fontsize=9, color=SNAVY)
+             "  (finer modes are revealed)", ha="center", va="center", fontsize=9, color=SNAVY)
+    fig.add_artist(FancyArrowPatch((x0, 0.875), (xT, 0.875), transform=fig.transFigure,
+                   arrowstyle="-|>", mutation_scale=14, color=SNAVY, lw=2.0))
+    fig.add_artist(FancyArrowPatch((xT, 0.82), (x0, 0.82), transform=fig.transFigure,
+                   arrowstyle="-|>", mutation_scale=12, color=SNAVY, lw=1.2,
+                   linestyle=(0, (4, 2.5))))
+    fig.text((x0 + xT) / 2, 0.78,
+             r"reversed, $\hat\Phi_s=\Phi_{T-s}$: $\mathrm{d}\hat\Phi_s=-\dot Q_{T-s}Q_{T-s}^{-1}"
+             r"\hat\Phi_s\,\mathrm{d}s+\dot Q_{T-s}^{1/2}\mathrm{d}\hat W_s$"
+             "  (linear: Gaussian blurring of $\\Phi_T\\sim\\nu_T$)",
+             ha="center", va="center", fontsize=8.5, color=SNAVY)
     fig.add_artist(FancyArrowPatch((xT, 0.045), (x0, 0.045), transform=fig.transFigure,
                    arrowstyle="-|>", mutation_scale=14, color=TEAL, lw=2.0))
     fig.text((x0 + xT) / 2, 0.0,
-             r"backward: $F_t=\mathbb{E}_t[-DV_T(\Phi_T)]$  (effective force at each scale)",
+             r"backward: $F_t=-DV_t(\Phi_t)=\mathbb{E}_t[-DV_T(\Phi_T)]$  (effective force at each scale)",
              ha="center", fontsize=9, color=TEAL)
     fig.savefig(os.path.join(HERE, "fbsde_flow.png"), dpi=220)
     plt.close(fig)
