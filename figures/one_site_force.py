@@ -1,15 +1,16 @@
 # Generates the TikZ source of Figure 12.1 of Lecture 5 (the force on one site).
 # Usage: python3 one_site_force.py fig.tex; then latex fig.tex; dvips -q fig.dvi -o fig.eps
 import numpy as np, math, sys
-lam,q=1.0,4.0; gam=3*lam; r=(q/gam)**0.5; norm=q*r
+# V = lam/12 y^4, force (lam/3) y^3
+lam,q=3.0,4.0; gam=lam; r=(q/gam)**0.5; norm=q*r
 ys=np.linspace(-15,15,200001)
 def F_in(x):
-    lw=-lam*ys**4/4-q*(ys-x)**2/2; w=np.exp(lw-lw.max()); return lam*(w*ys**3).sum()/w.sum()
+    lw=-lam*ys**4/12-q*(ys-x)**2/2; w=np.exp(lw-lw.max()); return lam/3*(w*ys**3).sum()/w.sum()
 def f_in(x):
-    y=np.roots([lam,0,q,-q*x]); y=y[np.abs(y.imag)<1e-9].real[0]; return lam*y**3
-z=np.linspace(0,5,200001); Cs=3*np.max(np.abs(z)*(1+3*z**2)**-3); bnd=2*Cs*(lam/q)**0.5/norm
+    y=np.roots([lam/3,0,q,-q*x]); y=y[np.abs(y.imag)<1e-9].real[0]; return lam/3*y**3
+z=np.linspace(0,5,200001); Cs=3*np.max(np.abs(z)*(1+3*z**2)**-3); bnd=2*Cs*(lam/(3*q))**0.5/norm
 X=np.linspace(0.05,6,120)
-fr=lam*(X*r)**3/norm; Fe=np.array([F_in(u*r) for u in X])/norm; fi=np.array([f_in(u*r) for u in X])/norm
+fr=lam/3*(X*r)**3/norm; Fe=np.array([F_in(u*r) for u in X])/norm; fi=np.array([f_in(u*r) for u in X])/norm
 rem1=np.abs(Fe-fr); rem2=np.abs(Fe-fi)
 def coords(xs,vs): return ' '.join('(%.3f,%.4f)'%(a,b) for a,b in zip(xs,vs))
 L=lambda v: (math.log10(v)+3)*1.6   # log axis 1e-3..1e2 -> 0..8
@@ -34,7 +35,7 @@ out=r'''\documentclass[tikz]{standalone}
 \draw[cyan!70!blue,dashed,line width=1.0pt] plot[smooth] coordinates {%s};
 \node[black!55,font=\scriptsize,anchor=west] at (5.3,5.3) {$qx$};
 \begin{scope}[shift={(3.15,7.7)},font=\scriptsize]
-\draw[red!55!black,line width=1.1pt] (0,0)--(0.6,0); \node[anchor=west] at (0.65,0) {frozen cube $\lambda x^3$};
+\draw[red!55!black,line width=1.1pt] (0,0)--(0.6,0); \node[anchor=west] at (0.65,0) {frozen cube $\tfrac{\lambda}{3}x^3$};
 \draw[black,line width=1.6pt] (0,-0.75)--(0.6,-0.75); \node[anchor=west] at (0.65,-0.75) {exact force $F_q$};
 \draw[cyan!70!blue,dashed,line width=1.0pt] (0,-1.5)--(0.6,-1.5); \node[anchor=west] at (0.65,-1.5) {integrated cube $f_q$};
 \end{scope}
@@ -48,7 +49,7 @@ out=r'''\documentclass[tikz]{standalone}
 \draw[red!55!black,line width=1.1pt] plot[smooth] coordinates {%s};
 \draw[black!55,dashed,thick] (0,%.4f)--(6,%.4f);
 \draw[black,line width=1.1pt] plot[smooth] coordinates {%s};
-\node[anchor=west,red!55!black,font=\scriptsize] at (3.4,7.7) {$\lvert F_q+\lambda x^3\rvert$};
+\node[anchor=west,red!55!black,font=\scriptsize] at (3.4,7.7) {$\lvert F_q+\tfrac{\lambda}{3}x^3\rvert$};
 \node[anchor=south east,black!60,font=\scriptsize] at (6,%.4f) {bound, Theorem 12.8};
 \node[anchor=north east,font=\scriptsize] at (6,%.4f) {$\lvert F_q-f_q\rvert$};
 \end{scope}

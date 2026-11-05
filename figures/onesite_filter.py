@@ -1,10 +1,10 @@
 """One-site illustration for the slide "One site" of Lecture 5.
 
-nu ~ exp(-lam phi^4/4) N(0, 1/q0) on one site, mass-regulator profile
+nu ~ exp(-lam phi^4/12) N(0, 1/q0) on one site, mass-regulator profile
 K_q = q, C_q = 1/q.  Bridge: Phi_q = ((q-q0) Phi_inf + B_{q-q0}) / q.
 Forecast psi_q = E[Phi_inf | Phi_q] (posterior tilted by
 exp(q Phi_q y - (q-q0) y^2/2)); approximate forecast Y_q solves
-q Y + lam Y^3 = q Phi_q (explicit force lam y^3); error Z = psi - Y.
+q Y + (lam/3) Y^3 = q Phi_q (explicit force (lam/3) y^3); error Z = psi - Y.
 Writes onesite_filter.pdf next to this script.  Fixed seed.
 """
 import os
@@ -19,10 +19,10 @@ plt.rcParams.update({"font.family": "serif", "mathtext.fontset": "cm", "font.siz
                      "axes.spines.top": False, "axes.spines.right": False,
                      "axes.linewidth": 0.6, "savefig.bbox": "tight", "savefig.dpi": 200})
 
-lam, q0, seed, M = 2.0, 1.0, 7, 200
+lam, q0, seed, M = 6.0, 1.0, 7, 200
 rng = np.random.default_rng(seed)
 y = np.linspace(-6, 6, 4001)
-prior = -lam * y**4 / 4 - q0 * y**2 / 2
+prior = -lam * y**4 / 12 - q0 * y**2 / 2
 w = np.exp(prior - prior.max()); cdf = np.cumsum(w); cdf /= cdf[-1]
 z = np.linspace(0, 5, 20001); Cstar = 3 * np.max(z * (1 + 3 * z**2) ** -3)
 
@@ -31,7 +31,7 @@ def forecast(qq, x):
     ww = np.exp(lw - lw.max()); return (ww * y).sum() / ww.sum()
 
 def approx(qq, x):
-    r = np.roots([lam, 0, qq, -qq * x]); return r[np.abs(r.imag) < 1e-9].real[0]
+    r = np.roots([lam / 3, 0, qq, -qq * x]); return r[np.abs(r.imag) < 1e-9].real[0]
 
 def path(q):
     phi_inf = np.interp(rng.random(), cdf, y)
@@ -61,7 +61,7 @@ a1.legend(frameon=False, fontsize=7.5, loc="lower right")
 a2.loglog(qb, e_obs, color=GREY, lw=1.4, label=r"$\psi_q-\Phi_q=C_qF_q$ (rms)")
 a2.loglog(qb, e_for, color=NAVY, lw=1.4, label=r"$\psi_q-\Phi_\infty$ (rms)")
 a2.loglog(qb, e_Z, color=TEAL, lw=1.4, label=r"$Z_q=\psi_q-Y_q$ (max over paths)")
-a2.loglog(qb, 2 * Cstar * lam**0.5 * qb**-1.5, color=ACCENT, lw=1.0, ls="--", label=r"bound $2C_\ast\lambda^{1/2}q^{-3/2}$")
+a2.loglog(qb, 2 * Cstar * (lam / 3)**0.5 * qb**-1.5, color=ACCENT, lw=1.0, ls="--", label=r"bound $2C_\ast(\lambda/3)^{1/2}q^{-3/2}$")
 a2.set_xlabel(r"resolution $q$")
 a2.set_title(r"sizes over %d paths" % M, fontsize=9)
 a2.legend(frameon=False, fontsize=7.5, loc="lower left")
